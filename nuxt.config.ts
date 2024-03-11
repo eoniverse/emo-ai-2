@@ -1,14 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  srcDir: 'src',
-  serverDir: 'server',
   modules: ['@nuxtjs/tailwindcss', '@nuxt/image', 'shadcn-nuxt'],
   tailwindcss: {
     exposeConfig: true,
-  },
-  shadcn: {
-    componentDir: './src/components/ui',
   },
   runtimeConfig: {
     spotifyClientId: process.env.SPOTIFY_CLIENT_ID,
