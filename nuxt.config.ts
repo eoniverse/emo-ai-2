@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   srcDir: 'src',
+  serverDir: 'server',
   modules: ['@nuxtjs/tailwindcss', '@nuxt/image', 'shadcn-nuxt'],
   tailwindcss: {
     exposeConfig: true,

@@ -23,8 +23,14 @@
     "@huggingface/inference": "^2.6.4",
     "@nuxt/image": "^1.4.0",
     "@nuxtjs/tailwindcss": "^6.11.4",
+    "@radix-icons/vue": "^1.0.0",
     "@spotify/web-api-ts-sdk": "^1.2.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
     "postcss-preset-env": "^9.5.0",
+    "radix-vue": "^1.5.2",
+    "tailwind-merge": "^2.2.1",
+    "tailwindcss-animate": "^1.0.7",
     "valibot": "^0.30.0"
   }
 }
