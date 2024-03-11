@@ -37,6 +37,9 @@ devDependencies:
   prettier-plugin-tailwindcss:
     specifier: ^0.5.12
     version: 0.5.12(prettier@3.2.5)
+  shadcn-nuxt:
+    specifier: ^0.10.0
+    version: 0.10.0
   typescript:
     specifier: ^5.4.2
     version: 5.4.2
@@ -1732,6 +1735,70 @@ packages:
       - ts-node
       - uWebSockets.js
     dev: false
+
+  /@oxc-parser/binding-darwin-arm64@0.7.0:
+    resolution: {integrity: sha512-6ADI2g5zTvkywFdKTVZiJ8BdaWIhck7eX8H1WRuB2IomQec8Mc3mK6IoWz7xxGjbHq3sM7hL3y8bJEkUrFtn1w==}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@oxc-parser/binding-darwin-x64@0.7.0:
+    resolution: {integrity: sha512-OWqt1G/MuvVuefn0mzDbgrbs6a+e7rJfW+tnxSgdig+2vKduUezdaU7RsP04nljn/cU1zZ8yAdpk4HnZTJgthw==}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@oxc-parser/binding-linux-arm64-gnu@0.7.0:
+    resolution: {integrity: sha512-anPfPFlvVOVenxxoaUuYf7mjkC5shOtX1x2PxXjCIXpichtXW1wX/6QhOA+ttRjXzzy056ckKOa4f6GjdMZmqQ==}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@oxc-parser/binding-linux-arm64-musl@0.7.0:
+    resolution: {integrity: sha512-iHzwpm1W+HmejCNP8s7g2aISHE3yRYwE2eGGUKR39oVnW5nMkMeX+3OK8+UqwQwv2kXN3oOQaZovcswIr+CSLA==}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@oxc-parser/binding-linux-x64-gnu@0.7.0:
+    resolution: {integrity: sha512-GzI2vXISF3lZ/DnoRfYRu1vv+DwjaBs6+/wjktluts/F6frsy901HODTaH90ZnsVHHeAgFuCDe0kyEeTodzx4Q==}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@oxc-parser/binding-linux-x64-musl@0.7.0:
+    resolution: {integrity: sha512-xjfbQR9TGdodzWErAaBwGHx4NTwJzNx/xxspXbyym4gP9RQ77fnWaOAugvNv8RQgQi1InMJgvYY9wLmSzx0gZQ==}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@oxc-parser/binding-win32-arm64-msvc@0.7.0:
+    resolution: {integrity: sha512-LbW6MAkHqbOUoptuABmkHHGDILr6/uq66pNDcAjyqwVmsuqf6W7Z+4c+NzEB7WdM1dO9I0W8QbLkZB4n2Dsujg==}
+    cpu: [arm64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@oxc-parser/binding-win32-x64-msvc@0.7.0:
+    resolution: {integrity: sha512-+3H+bE2Dyns2uxP7LEMmcVkRLoiX4UPWUhHt/bi4SOFRqyHgTKxvw1L6sn1yP1Zd4t8aLRgMkRSrRxlLSvl5CA==}
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
 
   /@parcel/watcher-android-arm64@2.4.1:
     resolution: {integrity: sha512-LOi/WTbbh3aTn2RYddrO8pnapixAziFl6SMxHM69r3tvdSm94JtCenaKgk1GRg5FJ5wpMCpHeW+7yqPlvZv7kg==}
@@ -5345,6 +5412,19 @@ packages:
       yargs-parser: 21.1.1
     dev: true
 
+  /oxc-parser@0.7.0:
+    resolution: {integrity: sha512-HmaOLQXPYvx39Zk+gCMXSGxeN+ZQqOE+EeH8Vh8noIua3oXW4SFauE2lH5vs/LhATENVjeXBYzuv3Z2hSvE8rA==}
+    optionalDependencies:
+      '@oxc-parser/binding-darwin-arm64': 0.7.0
+      '@oxc-parser/binding-darwin-x64': 0.7.0
+      '@oxc-parser/binding-linux-arm64-gnu': 0.7.0
+      '@oxc-parser/binding-linux-arm64-musl': 0.7.0
+      '@oxc-parser/binding-linux-x64-gnu': 0.7.0
+      '@oxc-parser/binding-linux-x64-musl': 0.7.0
+      '@oxc-parser/binding-win32-arm64-msvc': 0.7.0
+      '@oxc-parser/binding-win32-x64-msvc': 0.7.0
+    dev: true
+
   /p-map@4.0.0:
     resolution: {integrity: sha512-/bjOqmgETBYB5BoEeGVea8dmvHb2m9GLy1E9W43yeyfP6QQCZGFNa+XRceJEuDB6zqr+gKpIAmlLebMpykw/MQ==}
     engines: {node: '>=10'}
@@ -6603,6 +6683,16 @@ packages:
 
   /setprototypeof@1.2.0:
     resolution: {integrity: sha512-E5LDX7Wrp85Kil5bhZv46j8jOeboKq5JMmYM3gVGdGH8xFpPWXUMsNrlODCrkoxMEeNi/XZIwuRvY4XNwYMJpw==}
+
+  /shadcn-nuxt@0.10.0:
+    resolution: {integrity: sha512-zn0HuKxtzMqLnFcYz08nRbsL6IUbNwu4mLm3LXKZM7mDu28+YbiHniyzBENADksSj24+xzh4FmBEVS6RyWbhDw==}
+    dependencies:
+      '@nuxt/kit': 3.10.3
+      oxc-parser: 0.7.0
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+    dev: true
 
   /sharp@0.32.6:
     resolution: {integrity: sha512-KyLTWwgcR9Oe4d9HwCwNM2l7+J0dUQwn/yf7S0EnTtb0eVS4RxO0eUSvxPtzT4F3SY+C4K6fqdv/DO27sJ/v/w==}
