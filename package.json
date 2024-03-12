@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@vueuse/nuxt": "^10.9.0",
     "has-symbols": "^1.0.3",
     "nuxt": "^3.10.3",
     "prettier": "^3.2.5",
@@ -25,8 +26,10 @@
     "@nuxtjs/tailwindcss": "^6.11.4",
     "@radix-icons/vue": "^1.0.0",
     "@spotify/web-api-ts-sdk": "^1.2.0",
+    "@vueuse/core": "^10.9.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "lucide-vue-next": "^0.356.0",
     "postcss-preset-env": "^9.5.0",
     "radix-vue": "^1.5.2",
     "tailwind-merge": "^2.2.1",
