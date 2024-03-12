@@ -44,9 +44,9 @@
           :artists="s.author.map((a) => a.name)"
         />
       </div>
-      <div class="flex flex-col gap-4" v-if="usePopularity">
+      <div class="flex flex-col gap-4">
         <TrackCard
-          v-for="s in data.targetedPopularityRecommendations"
+          v-for="s in data.songsFromPlaylist"
           :image-urls="s.images"
           :url="s.url"
           :key="s.id"
@@ -54,9 +54,9 @@
           :artists="s.author.map((a) => a.name)"
         />
       </div>
-      <div class="flex flex-col gap-4">
+      <div class="flex flex-col gap-4" v-if="usePopularity">
         <TrackCard
-          v-for="s in data.songsFromPlaylist"
+          v-for="s in data.targetedPopularityRecommendations"
           :image-urls="s.images"
           :url="s.url"
           :key="s.id"
