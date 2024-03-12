@@ -1,9 +1,12 @@
-export default async (
-  sentiment: Ref<string>,
-  includePopularity: Ref<boolean>,
-  popularity: Ref<number>,
-  limit: Ref<number> | undefined = undefined
-) => {
+interface Options {
+  sentiment: Ref<string>
+  includePopularity: Ref<boolean>
+  popularity: Ref<number>
+  limit?: Ref<number>
+}
+
+export default async (options: Options) => {
+  const { sentiment, includePopularity, popularity, limit } = options
   const { data, error, pending, execute, status } = await useLazyFetch(
     '/api/sentiment',
     {
