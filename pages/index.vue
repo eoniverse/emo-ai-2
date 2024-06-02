@@ -1,9 +1,36 @@
 <template>
-  <div class="flex flex-col gap-4 px-2 pt-4 pb-4 w-full">
-    <div class="mx-auto flex w-full max-w-md flex-col gap-4">
-      <div class="flex items-center gap-1.5">
-        <Input id="text" placeholder="How do you feel" v-model="sentiment" />
-        <Button type="submit" @click="execute()">Search</Button>
+
+  <div class="flex flex-col gap-4 px-2 pt-4 pb-4 w-full h-full">
+
+
+    <div class="h-auto w-4/3 ml-48 mr-4 my-2 py-8 px-8 backdrop-blur-md bg-white/20 rounded-md">
+      <div class="h-auto w-full py-8 px-8 font-[Impact]">
+          <div class="hear-what-you-feel-wrapper">
+            <div class="hear-what-you-container">
+              <span class="text-8xl">Hear </span>
+              <span class="text-6xl">what you </span>
+              <span class="text-8xl">Feel .</span>
+            </div>
+          </div>
+          <div class="let-us-decide-the-music-for-yo-wrapper">
+            <h1 class="let-us-decide-container">
+              <p class="let-us-decide-the">
+                <span class="text-6xl">Let Your </span>
+                <span class="text-8xl">Emotion </span>
+              </p>
+              <p class="music-for-you">
+                <span class="text-6xl">Decide The </span>
+                <span class="text-8xl">Music </span>
+                <span class="text-6xl">For You </span>
+              </p>
+            </h1>
+          </div>
+        </div>
+
+    <div class="h-auto w-full flex flex-col justify-between py-5 px-5 gap-4 backdrop-blur-sm rounded-md">
+      <div class="flex items-center gap-4">
+        <Input class="h-16 text-2xl"id="text" placeholder="Write A Statement" v-model="sentiment" />
+        <Button class="h-16 w-32 transition duration-300 ease-in-out hover:scale-75" type="submit" @click="execute()">Search</Button>
       </div>
       <div class="flex flex-col gap-2">
         <div class="flex items-center space-x-2">
@@ -28,13 +55,15 @@
         </div>
       </div>
     </div>
-
+  </div>
+    <div class="h-16 w-4/5 backdrop-blur-sm border border-white -skew-x-12 self-center"></div>
     <div
       class="grid gap-4"
       :class="{ 'grid-cols-2': !usePopularity, 'grid-cols-3': usePopularity }"
       v-if="data && !pending"
     >
       <div class="flex flex-col gap-4">
+        <h1 class="text-2xl text-center text-white">SENTIMENTAL RECOMMENDATIONS</h1>
         <TrackCard
           v-for="s in data.sentimentRecommendations"
           :image-urls="s.images"
@@ -45,6 +74,7 @@
         />
       </div>
       <div class="flex flex-col gap-4">
+        <h1 class="text-2xl text-center text-white">SIMILAR RECOMMENDATIONS</h1>
         <TrackCard
           v-for="s in data.songsFromPlaylist"
           :image-urls="s.images"
@@ -55,6 +85,7 @@
         />
       </div>
       <div class="flex flex-col gap-4" v-if="usePopularity">
+        <h1 class="text-2xl text-center text-white">TARGETED POPULARITY</h1>
         <TrackCard
           v-for="s in data.targetedPopularityRecommendations"
           :image-urls="s.images"
@@ -64,16 +95,20 @@
           :artists="s.author.map((a) => a.name)"
         />
       </div>
+      
     </div>
+    
     <div v-else-if="status === 'pending' && pending" class="mx-auto">
       Loading. Please wait...
     </div>
+    <div class="h-16 w-4/5 backdrop-blur-sm border border-white -skew-x-12 self-center"></div>
   </div>
+ 
 </template>
 
 <script setup lang="ts">
 const sentiment = ref('')
-const usePopularity = ref(true)
+const usePopularity = ref(false)
 const popularity = ref([20])
 const limit = ref(5)
 
