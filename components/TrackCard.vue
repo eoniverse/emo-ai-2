@@ -1,7 +1,7 @@
 <template>
   <Card
     key="1"
-    class="mx-auto w-full max-w-sm overflow-hidden rounded-lg shadow-lg transition-all duration-200 hover:shadow-xl"
+    class="mx-auto w-full max-w-sm overflow-hidden rounded-lg shadow-lg transition-all duration-200 hover:shadow-xl "
   >
     <div class="relative">
       <NuxtImg
@@ -12,7 +12,7 @@
     </div>
     <CardContent class="p-4">
       <h2
-        class="text-2xl font-bold transition-all duration-200 hover:text-gray-700"
+        class="transition-all duration-200 hover:text-gray-700"
       >
         {{ name }}
       </h2>
